@@ -7,7 +7,7 @@ public class Palindroma {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Inserire parola");
-		String frase = scan.next();
+		String frase = scan.nextLine();
 		scan.close();
 		
 		if (controlloFrase(frase)) {
@@ -18,14 +18,14 @@ public class Palindroma {
 		
 	}
 	public static boolean controlloFrase(String frase) {
-		for (int i = 0; i < frase.length(); i ++ ) {
-			if (frase.indexOf(i) == frase.lastIndexOf(i)) {
-				} else {
+		String[] array = frase.split("");
+		for (int i = 0; i < array.length/2; i++) {
+			int x= array.length-i-1;
+			if (!array[i].equalsIgnoreCase(array[x]) ) {
 				return false;
-				}
-		}
+			}
+		}	
 		return true;
 	}
 
 }
-

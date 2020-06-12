@@ -18,11 +18,14 @@ public class Palindroma {
 		
 	}
 	public static boolean controlloFrase(String frase) {
-		if (frase.charAt(0) == frase.charAt(frase.length() - 1)) {
-			return true;
-			} else {
-			return false;
+		for (int i = 0; i < frase.length(); i ++ ) {
+			if (frase.indexOf(i) == frase.lastIndexOf(i)) {
+				} else {
+				return false;
+				}
 		}
+		return true;
 	}
 
 }
+
